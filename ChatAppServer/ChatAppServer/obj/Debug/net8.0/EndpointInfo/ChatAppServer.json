@@ -969,7 +969,7 @@
         }
       }
     },
-    "/api/Users/DeleteUser/{UserId}": {
+    "/api/Users/DeleteUser/{UserName},{PassWord}": {
       "delete": {
         "tags": [
           "UserApi"
@@ -977,12 +977,19 @@
         "operationId": "DeleteUser",
         "parameters": [
           {
-            "name": "UserId",
+            "name": "UserName",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
+            }
+          },
+          {
+            "name": "PassWord",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],

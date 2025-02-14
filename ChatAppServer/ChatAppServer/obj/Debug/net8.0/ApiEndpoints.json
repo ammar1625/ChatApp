@@ -384,14 +384,19 @@
   {
     "ContainingType": "ChatAppServer.Controllers.UserApi",
     "Method": "DeleteUser",
-    "RelativePath": "api/Users/DeleteUser/{UserId}",
+    "RelativePath": "api/Users/DeleteUser/{UserName},{PassWord}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "UserId",
-        "Type": "System.Int32",
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "PassWord",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

@@ -90,6 +90,41 @@ namespace ChatAppBusinessLayer
             
         }
 
+        //by user name password
+        public static clsUser GetuserByUserNamePassWord(string UserName , string  PassWord)
+        {
+            UserDto Userdto = UserData.GetUserByUserNamePassWord(UserName,utiles.Utiles.ComputeSHA256Hash(PassWord));
+            if (Userdto == null)
+            {
+                return null;
+            }
+
+            clsUser User = new clsUser(new UserDto(Userdto.UserId, Userdto.FirstName, Userdto.LastName, Userdto.UserName, Userdto.PassWord,
+                Userdto.ProfilePic, Userdto.DateOfBirth, Userdto.Gender, Userdto.PhoneNumber, Userdto.Email, Userdto.IsActive), EnMode.Update);
+
+
+            foreach (MessageDto message in Userdto.Messages)
+            {
+                User.Messages.Add(new clsMessage(new MessageDto(message.MessageId, message.MessageContent, message.SentAt, message.ConversationId,
+                    message.SenderId)));
+            }
+
+            foreach (ConversationDto conversation in Userdto.ConversationsAsUser1)
+            {
+                User.ConversationsAsUser1.Add(new clsConversation(new ConversationDto(conversation.ConversationId,
+                    conversation.User1, conversation.User2)));
+            }
+
+            foreach (ConversationDto conversation in Userdto.ConversationsAsUser2)
+            {
+                User.ConversationsAsUser2.Add(new clsConversation(new ConversationDto(conversation.ConversationId,
+                    conversation.User1, conversation.User2)));
+            }
+
+            return User;
+
+        }
+
         public static clsUser LogIn(string Email ,string PassWord)
         {
             UserDto UserToFind = UserData.LogIn(Email.Trim() ,utiles.Utiles.ComputeSHA256Hash(PassWord.Trim()));
@@ -179,9 +214,9 @@ namespace ChatAppBusinessLayer
             return UserData.ChangeUserPassWord(this.UserId, utiles.Utiles.ComputeSHA256Hash(this.PassWord.Trim()));
         }
 
-        public static bool DeleteUserById(int UserId)
+        public static bool DeleteUser(string UserName ,string PassWord)
         {
-            return UserData.DeleteUser(UserId);
+            return UserData.DeleteUser(UserName , utiles.Utiles.ComputeSHA256Hash(PassWord));
         }
 
         public static List<UserDto> FilterUsersByUserName(string UserNameQuery)

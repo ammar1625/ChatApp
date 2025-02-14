@@ -312,25 +312,25 @@ namespace ChatAppServer.Controllers
         }
 
 
-        [HttpDelete("DeleteUser/{UserId}",Name ="DeleteUser")]
+        [HttpDelete("DeleteUser/{UserName},{PassWord}",Name ="DeleteUser")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public IActionResult DeleteUser(int UserId)
+        public IActionResult DeleteUser(string UserName ,string PassWord)
         {
-            if (UserId <= 0 || UserId == null)
+            if (UserName=="" || PassWord=="")
                 return BadRequest("invalid data");
 
-            clsUser User = clsUser.GetuserById(UserId);
+            clsUser User = clsUser.GetuserByUserNamePassWord(UserName,PassWord);
 
-            if (User == null)
-                return NotFound($"user with id {UserId} is not found");
+            //if (User == null)
+            //    return NotFound($"user with User name {UserName} is not found");
 
             //if (UserData.stream != null)
             //    UserData.stream.Dispose();
 
-            if (clsUser.DeleteUserById(UserId))
+            if (clsUser.DeleteUser(UserName , PassWord))
             {
                 return Ok(true);
             }

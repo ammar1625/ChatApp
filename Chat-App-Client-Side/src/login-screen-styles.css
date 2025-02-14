@@ -159,7 +159,12 @@
 
 .change-password-btn
 {
-    @apply h-[20%] w-[25%]
+    @apply h-[13%] w-[35%] text-[110%] rounded-xl
+}
+
+.close-account-btn
+{
+    @apply h-[15%] w-[20%] text-[130%] rounded-xl
 }
 
 

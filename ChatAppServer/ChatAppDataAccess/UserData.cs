@@ -94,6 +94,86 @@ namespace ChatAppDataAccess
 
         }
 
+        //by user name and password
+        public static UserDto GetUserByUserNamePassWord(string UserName ,string PassWord)
+        {
+            User? UserToFind = null;
+            UserDto? UserDtoToReturn = null;
+
+            using (AppDbContext Context = new AppDbContext())
+            {
+                try
+                {
+                    UserToFind = Context.Users
+                        .Include(u => u.Messages)
+                        .Include(u => u.ConversationsAsUser1).
+                        Include(u => u.ConversationsAsUser2)
+                        .FirstOrDefault(u => u.UserName == UserName && u.PassWord == PassWord);
+
+                    //in case user = null return null 
+                    if (UserToFind == null)
+                    {
+                        return null;
+                    }
+
+                    //in case the user is found and has a profile pic
+                    if (UserToFind.ProfilePic != null)
+                    {
+                        //handle user profile pic
+
+                        string ImagePath = Path.Combine(ImagesDirectory, UserToFind.ProfilePic);
+
+                        stream = File.OpenRead(ImagePath);
+
+                        IFormFile UserImage = new FormFile(stream, UserToFind.ProfilePic, GetMimeType(UserToFind.ProfilePic));
+
+                        UserDtoToReturn = new UserDto(UserToFind.UserId, UserToFind.FirstName, UserToFind.LastName, UserToFind.UserName,
+                            UserToFind.PassWord, UserImage, UserToFind.DateOfBirth, UserToFind.Gender, UserToFind.PhoneNumber, UserToFind.Email,
+                            UserToFind.IsActive);
+
+
+                    }
+                    //else return the user and set the profile pic to null
+                    else
+                    {
+                        UserDtoToReturn = new UserDto(UserToFind.UserId, UserToFind.FirstName, UserToFind.LastName, UserToFind.UserName,
+                           UserToFind.PassWord, null, UserToFind.DateOfBirth, UserToFind.Gender, UserToFind.PhoneNumber, UserToFind.Email,
+                           UserToFind.IsActive);
+
+                    }
+
+                    //handle navigation properties
+                    foreach (Message message in UserToFind.Messages)
+                    {
+                        UserDtoToReturn.Messages.Add(new MessageDto(message.MessageId, message.MessageContent, message.SentAt,
+                            message.ConversationId, message.SenderId));
+                    }
+
+                    foreach (Conversation conversation in UserToFind.ConversationsAsUser1)
+                    {
+                        UserDtoToReturn.ConversationsAsUser1.Add(new ConversationDto(conversation.ConversationId, conversation.User1,
+                            conversation.User2));
+                    }
+
+                    foreach (Conversation conversation in UserToFind.ConversationsAsUser2)
+                    {
+                        UserDtoToReturn.ConversationsAsUser2.Add(new ConversationDto(conversation.ConversationId, conversation.User1,
+                            conversation.User2));
+                    }
+
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+
+
+            return UserDtoToReturn;
+
+        }
+
         public static UserDto LogIn(string Email , string PassWord)
         {
             User? UserToFind = null;
@@ -331,14 +411,14 @@ namespace ChatAppDataAccess
             return (AffectedRows > 0);
         }
 
-        public static bool DeleteUser(int UserId)
+        public static bool DeleteUser(string UserName , string PassWord)
         {
             int AffectedRows = 0;
             using(AppDbContext Context = new AppDbContext())
             {
                 try
                 {
-                    AffectedRows = Context.Database.ExecuteSqlInterpolated($"Exec Sp_DeleteUserById @UserId = {UserId}");
+                    AffectedRows = Context.Database.ExecuteSqlInterpolated($"Exec Sp_DeleteUser @UserName = {UserName} , @PassWord = {PassWord}");
                 }
                 catch(Exception ex)
                 {

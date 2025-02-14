@@ -16,6 +16,15 @@
       "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\dto\u0027s\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\dto\u0027s\\conversationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6CCCDD38-8B62-4E87-8CC7-468A8EAE1857}|..\\ChatAppBusinessLayer\\ChatAppBusinessLayer.csproj|c:\\repos\\chatapp\\chatappserver\\chatappbusinesslayer\\utiles\\utiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,16 +35,7 @@
       "AbsoluteMoniker": "D:0:0:{6CCCDD38-8B62-4E87-8CC7-468A8EAE1857}|..\\ChatAppBusinessLayer\\ChatAppBusinessLayer.csproj|c:\\repos\\chatapp\\chatappserver\\chatappbusinesslayer\\clsconversation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\dto\u0027s\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\dto\u0027s\\conversationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\conversationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\dto\u0027s\\conversationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -91,9 +91,10 @@
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\UserData.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\UserData.cs",
               "RelativeToolTip": "..\\ChatAppDataAccess\\UserData.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAYwKkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAKABAAAAAAAAAAAYwKwBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T08:11:39.693Z"
+              "WhenOpened": "2025-02-04T08:11:39.693Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -103,21 +104,23 @@
               "RelativeDocumentMoniker": "..\\ChatAppBusinessLayer\\clsUser.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppBusinessLayer\\clsUser.cs",
               "RelativeToolTip": "..\\ChatAppBusinessLayer\\clsUser.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAYwHoAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAANAAAAAAAAAAAAAuwNoAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T09:04:26.386Z"
+              "WhenOpened": "2025-02-04T09:04:26.386Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\models\\User.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\models\\User.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\models\\User.cs",
               "RelativeToolTip": "..\\ChatAppDataAccess\\models\\User.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAIA2wBMAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T07:49:55.321Z"
+              "WhenOpened": "2025-02-04T07:49:55.321Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -125,24 +128,25 @@
               "Title": "UserApi.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Controllers\\UserApi.cs",
               "RelativeDocumentMoniker": "Controllers\\UserApi.cs",
-              "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Controllers\\UserApi.cs",
-              "RelativeToolTip": "Controllers\\UserApi.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAAAswJoAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Controllers\\UserApi.cs*",
+              "RelativeToolTip": "Controllers\\UserApi.cs*",
+              "ViewState": "AgIAADEBAAAAAAAAAAAiwDoBAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-04T09:20:44.648Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Utiles.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppBusinessLayer\\utiles\\Utiles.cs",
               "RelativeDocumentMoniker": "..\\ChatAppBusinessLayer\\utiles\\Utiles.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppBusinessLayer\\utiles\\Utiles.cs",
               "RelativeToolTip": "..\\ChatAppBusinessLayer\\utiles\\Utiles.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwBQAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAYwAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T11:19:21.196Z"
+              "WhenOpened": "2025-02-04T11:19:21.196Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -152,13 +156,40 @@
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\data\\AppDbContext.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\data\\AppDbContext.cs",
               "RelativeToolTip": "..\\ChatAppDataAccess\\data\\AppDbContext.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAwCYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T20:21:37.123Z"
+              "WhenOpened": "2025-02-03T20:21:37.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
+              "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
+              "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
+              "RelativeToolTip": "..\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwC8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T08:22:26.135Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ConversationDto.cs",
+              "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
+              "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
+              "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
+              "RelativeToolTip": "..\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAzwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T09:17:27.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ConversationsApi.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Controllers\\ConversationsApi.cs",
               "RelativeDocumentMoniker": "Controllers\\ConversationsApi.cs",
@@ -170,31 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
-              "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
-              "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
-              "RelativeToolTip": "..\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAYwC8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T08:22:26.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ConversationDto.cs",
-              "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
-              "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
-              "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
-              "RelativeToolTip": "..\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwB4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T09:17:27.596Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ConversationData.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\ConversationData.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\ConversationData.cs",
@@ -206,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "clsConversation.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppBusinessLayer\\clsConversation.cs",
               "RelativeDocumentMoniker": "..\\ChatAppBusinessLayer\\clsConversation.cs",
