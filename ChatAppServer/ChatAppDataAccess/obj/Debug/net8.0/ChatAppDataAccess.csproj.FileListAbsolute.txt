@@ -1,0 +1,14 @@
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\bin\Debug\net8.0\AppConfig.json
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\bin\Debug\net8.0\ChatAppDataAccess.deps.json
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\bin\Debug\net8.0\ChatAppDataAccess.dll
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\bin\Debug\net8.0\ChatAppDataAccess.pdb
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\ChatAppDataAccess.csproj.AssemblyReference.cache
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\ChatAppDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\ChatAppDataAccess.AssemblyInfoInputs.cache
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\ChatAppDataAccess.AssemblyInfo.cs
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\ChatAppDataAccess.csproj.CoreCompileInputs.cache
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\ChatAppDataAccess.sourcelink.json
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\ChatAppDataAccess.dll
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\refint\ChatAppDataAccess.dll
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\ChatAppDataAccess.pdb
+C:\repos\ChatApp\ChatAppServer\ChatAppDataAccess\obj\Debug\net8.0\ref\ChatAppDataAccess.dll

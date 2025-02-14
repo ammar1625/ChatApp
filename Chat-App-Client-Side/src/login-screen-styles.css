@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+*{
+    @apply font-[roboto]
+}
+/*log in page styles*/
+.log-in-home-page
+{
+    @apply h-screen 
+}
+
+.nav-bar
+{
+    @apply  flex justify-around items-center py-3 bg-zinc-100 shadow-md shadow-zinc-400 h-[13%]
+}
+
+.logo
+{
+    @apply w-16 rounded-full 
+}
+
+.links-div
+{
+    @apply  w-[30%] flex justify-around items-center font-bold
+}
+
+.nav-link
+{
+    @apply text-2xl  text-slate-600 font-semibold hover:opacity-80  transition-all duration-300
+}
+
+.nav-link:hover
+{
+    text-shadow: 3px 2px 3px rgb(129, 128, 128);
+}
+
+.outlet
+{
+    @apply h-[86%] mt-[3px]
+}
+
+
+.login
+{
+    @apply   bg-zinc-200 flex flex-col justify-center items-center w-[100%] h-[100%]
+}
+
+.title
+{
+    @apply text-4xl text-slate-700 font-bold font-[roboto]
+}
+
+.login-form
+{
+    @apply  w-[33%] flex flex-col justify-around items-center h-[50%] bg-slate-300 pt-5  mt-5
+    rounded-lg shadow-lg shadow-slate-500 
+}
+
+
+
+.field-ctr
+{
+    @apply flex justify-between items-center w-[90%]
+}
+
+.input-ctr
+{
+    @apply flex justify-around items-center w-[65%]
+}
+
+.field-input
+{
+    @apply border-2 border-slate-400  w-[90%] outline-none rounded-md ml-2 px-2 text-lg font-medium font-[roboto] text-slate-700
+}
+
+.invalid-input
+{
+    @apply bg-pink-50  border-red-300
+}
+
+.field-label
+{
+    @apply text-lg font-medium font-[roboto] text-slate-800
+}
+
+.login-btn
+{
+    @apply bg-blue-500 text-white text-[130%] font-[roboto] px-4 py-2 rounded-md cursor-pointer hover:shadow-lg
+     shadow-blue-600 transition-all duration-300 h-[11%] w-[22%] flex justify-center items-center
+}
+
+.log-in
+{
+    @apply h-[17%] w-[21%]
+}
+
+.error-msg
+{
+    @apply text-[100%] text-red-600 font-[roboto] font-medium transition-all duration-500
+}
+
+/*create account page styles*/
+
+.create-account
+{
+   @apply   bg-zinc-200 flex flex-col justify-evenly items-center w-[100%] h-[100%] pb-3
+
+}
+
+.create-account-form
+{
+    @apply h-[85%] pb-2
+}
+
+.gender-ctr
+{
+    @apply justify-start
+}
+
+.gender
+{
+    @apply ml-2
+}
+
+.pic-label
+{
+    @apply bg-blue-600 text-lg text-white font-medium px-2 py-1 rounded-sm
+}
+
+.profile-image
+{
+    @apply w-16 rounded-full
+}
+
+.invisible
+{
+    @apply invisible
+}
+
+.disabled-btn
+{
+    @apply opacity-40
+}
+
+.img-ctr
+{
+    @apply flex flex-col justify-between items-center
+}
+
+.remove-pic-link
+{
+    @apply text-[90%] text-blue-800 font-medium
+}
+
+.spinner
+{
+    @apply w-6 h-6 border-4 border-white border-t-transparent border-solid rounded-full animate-spin
+}
+
+.change-password-btn
+{
+    @apply h-[20%] w-[25%]
+}
+
+

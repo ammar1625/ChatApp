@@ -1,0 +1,17 @@
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\bin\Debug\net8.0\AppConfig.json
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\bin\Debug\net8.0\ChatAppBusinessLayer.deps.json
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\bin\Debug\net8.0\ChatAppBusinessLayer.dll
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\bin\Debug\net8.0\ChatAppBusinessLayer.pdb
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\bin\Debug\net8.0\ChatAppDataAccess.dll
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\bin\Debug\net8.0\ChatAppDataAccess.pdb
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ChatAppBusinessLayer.csproj.AssemblyReference.cache
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ChatAppBusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ChatAppBusinessLayer.AssemblyInfoInputs.cache
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ChatAppBusinessLayer.AssemblyInfo.cs
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ChatAppBusinessLayer.csproj.CoreCompileInputs.cache
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ChatAppBusinessLayer.sourcelink.json
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ChatAppB.A931B9F1.Up2Date
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ChatAppBusinessLayer.dll
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\refint\ChatAppBusinessLayer.dll
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ChatAppBusinessLayer.pdb
+C:\repos\ChatApp\ChatAppServer\ChatAppBusinessLayer\obj\Debug\net8.0\ref\ChatAppBusinessLayer.dll
