@@ -6,7 +6,7 @@ import { FaUser } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
 import { BiSolidConversation } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useLogIn } from "../hooks/useLogIn";
 import useUserLogInInfos from "../stores/useUserLogInInfos";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
@@ -36,7 +36,8 @@ interface elementsVisibility
 }
 function MainPageNavBar()
 {
-    const {user} =useUserLogInInfos();
+    const navigate = useNavigate();
+    const {user,setUser} =useUserLogInInfos();
     const {data:currentUser} =useLogIn(user)
     const {userNameQuery , setUserNameQuery} = useUserNameQueryStore();
     const {data:filteredUsersList} = useUsersList(userNameQuery);
@@ -49,15 +50,7 @@ function MainPageNavBar()
    const [areVisible , setVisible] = useState<elementsVisibility>({isNavBarMenueVisible:false,isUsersListVisible:false});
    const [isSelected, setIsSelected] = useState(true);
    const usersListRef = useRef<HTMLDivElement>(null);
-   //to set the logged in user infos
-  /*    useEffect(()=>{
-       if(currentUser)
-       {
-        //setUserId(Number(currentUser?.userId));
-        setLogedInUser({...logedinUser , userName: currentUser?.userName , profilePic:currentUser?.profilePic?.image? URL.createObjectURL(base64ToBlob(currentUser?.profilePic?.image,currentUser?.profilePic?.contentType)):null,gender:currentUser?.gender})
-       } */
-       
-  /*   },[currentUser]);  */
+  
 
   
     useEffect(() => {
@@ -110,6 +103,13 @@ function MainPageNavBar()
         setVisible({...areVisible,isNavBarMenueVisible:false});
       }
 
+      function handleLogOut()
+      {
+        setTimeout(() => {
+            setUser({email:"",passWord:""});
+            navigate("/");
+        }, (2500));
+      }
     return <>
         <nav className="nav-bar main-page-nav-bar">
 
@@ -133,15 +133,7 @@ function MainPageNavBar()
 
             <div onClick={hideNavBarMenue} ref={usersListRef} className={areVisible.isUsersListVisible?"users-to-find-ctr ":"users-to-find-ctr invisible"}>
                 
-              {/*   <div className="logged-in-user-infos user-to-find-infos">
-                    <img className="logged-in-user-image" src={male}/>
-                    <span className="logged-in-user-name">Ammar bouzenka</span>
-                </div>
-
-                <div className="logged-in-user-infos user-to-find-infos">
-                    <img className="logged-in-user-image" src={male}/>
-                    <span className="logged-in-user-name">Ammar bouzenka</span>
-                </div> */}
+              
 
                 {filteredUsersList?.map(u=> u.userId!=currentUser?.userId && <div data-user-id={u.userId} key={u.userId} className="logged-in-user-infos user-to-find-infos"
                 onClick={handleConversationCreation} >
@@ -155,7 +147,9 @@ function MainPageNavBar()
                 <NavLink  to="/main-page/update" className={({isActive})=>isActive?"menue-item selected":"menue-item"} onClick={()=>setIsSelected(false)}><span className="menue-icon"><FaUser size={18} color="#45556c"/></span> update infos</NavLink>
                 <NavLink  to="/main-page/changepassword" className={({isActive})=>isActive?"menue-item selected":"menue-item"} onClick={()=>setIsSelected(false)}><span className="menue-icon"><CgPassword size={18} color="#45556c"/></span> change password</NavLink>
                 <NavLink  to="/main-page/closeaccount" className={({isActive})=>isActive?"menue-item selected":"menue-item"} onClick={()=>setIsSelected(false)}><span className="menue-icon"><MdDeleteForever size={18} color="red"/></span> close account</NavLink>
-                <span  className="menue-item"><span className="menue-icon"><MdLogout size={18} color="red"/></span> disconnect</span>
+                <span  className="menue-item"
+                onClick={handleLogOut}><span onClick={handleLogOut} className="menue-icon"><MdLogout size={18} color="red" onClick={handleLogOut}/></span > disconnect
+                </span>
             </div>
         </nav>
     </>

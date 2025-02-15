@@ -97,8 +97,7 @@
               "RelativeToolTip": "Services\\WebSocketServerBackgroundService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T08:09:25.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-15T08:09:25.86Z"
             },
             {
               "$type": "Document",
@@ -110,8 +109,7 @@
               "RelativeToolTip": "Controllers\\UserApi.cs",
               "ViewState": "AgIAADEBAAAAAAAAAAAiwDoBAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-04T09:20:44.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T09:20:44.648Z"
             },
             {
               "$type": "Document",
@@ -121,7 +119,7 @@
               "RelativeDocumentMoniker": "Services\\WebSocketBehaviorHandler.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Services\\WebSocketBehaviorHandler.cs",
               "RelativeToolTip": "Services\\WebSocketBehaviorHandler.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB0AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwB0AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-07T19:40:26.79Z",
               "EditorCaption": ""
@@ -136,8 +134,7 @@
               "RelativeToolTip": "..\\ChatAppBusinessLayer\\clsMessage.cs",
               "ViewState": "AgIAACEAAAAAAAAAAADgvzEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T13:52:03.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T13:52:03.515Z"
             },
             {
               "$type": "Document",
@@ -149,8 +146,7 @@
               "RelativeToolTip": "..\\ChatAppDataAccess\\Dto\u0027s\\MessageDto.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAUwBcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T13:49:45.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T13:49:45.843Z"
             },
             {
               "$type": "Document",
@@ -162,8 +158,7 @@
               "RelativeToolTip": "..\\ChatAppDataAccess\\MessageData.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAhwCoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T13:49:12.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T13:49:12.404Z"
             },
             {
               "$type": "Document",
@@ -175,8 +170,7 @@
               "RelativeToolTip": "Controllers\\MessageApi.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T14:02:58.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-06T14:02:58.149Z"
             },
             {
               "$type": "Document",

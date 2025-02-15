@@ -134,7 +134,7 @@
 
 .invisible
 {
-    @apply invisible
+    @apply opacity-0 invisible
 }
 
 .disabled-btn

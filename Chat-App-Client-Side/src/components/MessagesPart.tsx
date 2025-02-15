@@ -8,6 +8,7 @@ import male from "../images/user.jpg";
 import {  useEffect, useRef, useState } from "react";
 import useGetMessagesByConversation, { message } from "../hooks/useGetMessagesByConversation";
 import { useNavigate } from "react-router-dom";
+import MessageSkeleton from "./MessageSkeleton";
 
 
 
@@ -31,7 +32,7 @@ function MessagesPart()
 
     const {selectedConevrsationId } = useSelectedConversationId();
     const {data:selectedConversation} = useGetConversationByConversationId(selectedConevrsationId);
-    const {data:messages} = useGetMessagesByConversation(selectedConevrsationId);
+    const {data:messages ,isLoading} = useGetMessagesByConversation(selectedConevrsationId);
     const {user} =useUserLogInInfos();
     const {data:currentUser} =useLogIn(user);
 
@@ -102,7 +103,7 @@ function MessagesPart()
         } 
         
         } 
-
+       
     
    
     useEffect(()=>{
@@ -113,7 +114,13 @@ function MessagesPart()
                 profilePic:Number(selectedConversation?.user1)!=Number(currentUser?.userId)?URL.createObjectURL(base64ToBlob( selectedConversation?.user_1.profilePic.image,selectedConversation?.user_1.profilePic.contentType)) :selectedConversation?.user_2.profilePic.image?URL.createObjectURL(base64ToBlob(selectedConversation.user_2.profilePic.image,selectedConversation.user_2.profilePic.contentType)):male
             })
         }
-    },[selectedConversation])
+    },[selectedConversation]);
+
+
+    function messagesSkeletons()
+    {
+        return  [1,2,3,4].map((m,i)=>i%2==0?<MessageSkeleton/>:<MessageSkeleton isSent/>)
+    }
     return <div className="massages-part">
 
            <div className="conversation current-convesation">
@@ -124,10 +131,10 @@ function MessagesPart()
             <div ref = {messagesCtrRef} className="messages-ctr">
 
 
-                { messagesList?.map(m=> <div key={Number(m.messageId)} className={m.senderId===Number(currentUser?.userId)?"message-ctr":"message-ctr incoming-msg-ctr"}>
+                {isLoading? messagesSkeletons(): messagesList?.map(m=> <div key={Number(m.messageId)} className={m.senderId===Number(currentUser?.userId)?"message-ctr":"message-ctr incoming-msg-ctr"}>
                     <p  className={m.senderId===Number(currentUser?.userId)?"message":"message incoming-message"}>{m.messageContent}</p>
                 </div>)}
-               
+             
             </div>
 
           
@@ -139,6 +146,8 @@ function MessagesPart()
                 }}/>
                 <button className="send-btn"><IoSend size={29} color="blue" onClick={handleSendMessage}/></button>
             </div>
+
+            
     </div>
 }
 
