@@ -6,13 +6,13 @@ namespace ChatAppServer.Services
     public class WebSocketServerBackgroundService : BackgroundService
     {
         private WebSocketServer _webSocketServer;
-        private const int Port = 8080;
-        private const string Path = "/ws";
+        private const int Port = 7890;
+        private const string Path = "ws://localhost";
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            _webSocketServer = new WebSocketServer(Port);
-            _webSocketServer.AddWebSocketService<WebSocketBehaviorHandler>(Path);
+            _webSocketServer = new WebSocketServer("ws://localhost:7890");
+            _webSocketServer.AddWebSocketService<WebSocketBehaviorHandler>("/messages");
 
             // Start the server
             _webSocketServer.Start();

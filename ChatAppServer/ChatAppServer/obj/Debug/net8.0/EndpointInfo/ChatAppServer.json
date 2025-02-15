@@ -307,38 +307,6 @@
         }
       }
     },
-    "/api/Message/AddNewMessage": {
-      "post": {
-        "tags": [
-          "MessageApi"
-        ],
-        "operationId": "AddMessage",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/MessageDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/MessageDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/MessageDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/Users/UserId/{UserId}": {
       "get": {
         "tags": [

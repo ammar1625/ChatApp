@@ -138,13 +138,6 @@ function UpdateUserInfos()
           },[userName,email,phone])
 
           useEffect(()=>{
-            console.log(currentUser);
-          },[currentUser])
-
-          useEffect(()=>{
-            console.log(user);
-          },[user])
-          useEffect(()=>{
             if(currentUser)
             {
                 setCurrentUserInfos({

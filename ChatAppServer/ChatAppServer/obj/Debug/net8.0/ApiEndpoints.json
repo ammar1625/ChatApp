@@ -182,23 +182,6 @@
   },
   {
     "ContainingType": "ChatAppServer.Controllers.MessageApi",
-    "Method": "AddNewMessage",
-    "RelativePath": "api/Message/AddNewMessage",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "message",
-        "Type": "ChatAppDataAccess.Dto_s.MessageDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [],
-    "EndpointName": "AddMessage"
-  },
-  {
-    "ContainingType": "ChatAppServer.Controllers.MessageApi",
     "Method": "GetMessagesByConversationId",
     "RelativePath": "api/Message/Messages/{ConversationId}",
     "HttpMethod": "GET",

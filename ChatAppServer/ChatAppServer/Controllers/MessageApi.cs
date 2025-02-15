@@ -23,18 +23,18 @@ namespace ChatAppServer.Controllers
             return Ok(Messages);
         }
 
-        [HttpPost("AddNewMessage",Name ="AddMessage")]
-        public IActionResult AddNewMessage(MessageDto message)
-        {
-            clsMessage Message = new clsMessage(new MessageDto(message.MessageId, message.MessageContent, message.SentAt, message.ConversationId,
-                message.SenderId));
+        //[HttpPost("AddNewMessage",Name ="AddMessage")]
+        //public IActionResult AddNewMessage(MessageDto message)
+        //{
+        //    clsMessage Message = new clsMessage(new MessageDto(message.MessageId, message.MessageContent, message.SentAt, message.ConversationId,
+        //        message.SenderId));
 
-            if(Message.AddNewMessage())
-            {
-                return Ok(Message);
-            }
-            return StatusCode(500, "error");
-        }
+        //    if(Message.AddNewMessage())
+        //    {
+        //        return Ok(Message);
+        //    }
+        //    return StatusCode(500, "error");
+        //}
     }
     
 }

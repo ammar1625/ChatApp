@@ -39,9 +39,9 @@ namespace ChatAppBusinessLayer
             return MessageData.GetMessagesByConversationId (ConversationId);
         }
 
-        public bool AddNewMessage()
+        public  bool  AddNewMessage()
         {
-            this.MessageId = MessageData.AddNewMessage(new MessageDto(0,this.MessageContent,this.SentAt,this.ConversationId,this.SenderId));
+            this.MessageId = MessageData.AddNewMessage(new MessageDto(0, this.MessageContent, this.SentAt, this.ConversationId, this.SenderId));
 
             return (this.MessageId != -1);
         }

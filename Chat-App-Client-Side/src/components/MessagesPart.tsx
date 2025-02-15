@@ -5,7 +5,11 @@ import { useLogIn } from "../hooks/useLogIn";
 import useUserLogInInfos from "../stores/useUserLogInInfos";
 import { base64ToBlob } from "../utiles/utiles";
 import male from "../images/user.jpg";
-import { useEffect, useState } from "react";
+import {  useEffect, useRef, useState } from "react";
+import useGetMessagesByConversation, { message } from "../hooks/useGetMessagesByConversation";
+import { useNavigate } from "react-router-dom";
+
+
 
 interface currentConversationInfos
 {
@@ -14,14 +18,93 @@ interface currentConversationInfos
 }
 function MessagesPart()
 {
+    const navigate =  useNavigate();
+
+
+    //const messageFieldRef = useRef<HTMLInputElement>(null);
+    const [messagesList , setMessagesList] = useState<message[]>([]);
+    const webSocketRef = useRef<WebSocket | null>(null);
+    const [inputMessage,setInputMessage] = useState("");
+    const messagesCtrRef = useRef<HTMLDivElement>(null);
+   
     const [currentConversationInfos,setCurrentConversatioInfos] = useState<currentConversationInfos>({userName:"", profilePic:""})
 
     const {selectedConevrsationId } = useSelectedConversationId();
     const {data:selectedConversation} = useGetConversationByConversationId(selectedConevrsationId);
-
+    const {data:messages} = useGetMessagesByConversation(selectedConevrsationId);
     const {user} =useUserLogInInfos();
     const {data:currentUser} =useLogIn(user);
 
+    useEffect(()=>{
+        if(messages)
+            {
+                setMessagesList([...messages]);
+                if(messagesCtrRef.current)
+                {
+                      messagesCtrRef.current.scrollTop = messagesCtrRef.current?.scrollHeight;
+                     
+                }
+               
+            }
+    },[messages]);
+
+    useEffect(()=>{
+        console.log(messagesList);
+
+    },[messagesList]);
+
+   
+
+    useEffect(()=>{
+        if (!selectedConevrsationId) return;
+
+        webSocketRef.current = new WebSocket("ws://localhost:7890/messages");
+
+        webSocketRef.current.onmessage = function(event)
+        {
+            const newMessage:message = JSON.parse(event.data);
+
+            setMessagesList(prev=>[...prev,newMessage]);
+            
+            
+        }
+
+       
+    
+    },[selectedConevrsationId]);
+
+
+
+    const handleSendMessage = ()=> {
+        if (!inputMessage.trim() || !selectedConevrsationId) return;
+
+        const newMessage:message = {
+            messageId:0,
+            messageContent: inputMessage,
+            conversationId : selectedConevrsationId,
+            senderId : Number(currentUser?.userId),
+            sentAt : new Date()
+
+        };
+
+        
+
+        if (webSocketRef.current?.readyState === WebSocket.OPEN) {
+            webSocketRef.current.send(JSON.stringify(newMessage));
+            setInputMessage('');
+
+             setTimeout(() => {
+                navigate("/main-page/update")
+            }, 10); 
+            setTimeout(() => {
+                navigate("/main-page");
+            }, 15); 
+        } 
+        
+        } 
+
+    
+   
     useEffect(()=>{
         if(selectedConversation)
         {
@@ -38,35 +121,23 @@ function MessagesPart()
                 <span className="conversation-user">{currentConversationInfos.userName}</span>
             </div>
 
-            <div className="messages-ctr">
+            <div ref = {messagesCtrRef} className="messages-ctr">
 
-                <div className="message-ctr incoming-msg-ctr">
-                    <p className="message incoming-message">hello</p>
-                </div>
 
-                <div className="message-ctr">
-                    <p className="message">hello how are you my name is Ammar and
-                         i am a full stack web developer and i am from algeria and i am 32 years old and i live in constantine
-                    </p>
-                    
-                </div>
-
-                <div className="message-ctr">
-                    <p className="message">hello how are you my name is Ammar and
-                         i am a full stack web developer and i am from algeria and i am 32 years old and i live in constantine
-                    </p>
-                    
-                </div>
-
-                <div className="message-ctr incoming-msg-ctr">
-                    <p className="message incoming-message">wow ! sounds great nice to meet you</p>
-                </div>
+                { messagesList?.map(m=> <div key={Number(m.messageId)} className={m.senderId===Number(currentUser?.userId)?"message-ctr":"message-ctr incoming-msg-ctr"}>
+                    <p  className={m.senderId===Number(currentUser?.userId)?"message":"message incoming-message"}>{m.messageContent}</p>
+                </div>)}
                
             </div>
 
+          
+
             <div className="message-field-ctr">
-                <input className="message-field" type="text"/>
-                <button className="send-btn"><IoSend size={29} color="blue"/></button>
+                <input  className="message-field" type="text" onChange={(e)=>{
+                    setInputMessage(e.target.value);
+                   
+                }}/>
+                <button className="send-btn"><IoSend size={29} color="blue" onClick={handleSendMessage}/></button>
             </div>
     </div>
 }
