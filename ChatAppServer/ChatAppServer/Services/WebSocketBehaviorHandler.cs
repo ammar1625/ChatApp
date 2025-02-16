@@ -27,9 +27,11 @@ namespace ChatAppServer.Services
 
             
 
-            Sessions.Broadcast(JsonConvert.SerializeObject(serialzedMessage));
+            Sessions.Broadcast(serialzedMessage);
 
             
         }
+
+        
     }
 }

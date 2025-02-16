@@ -39,7 +39,7 @@ function MessagesPart()
     useEffect(()=>{
         if(messages)
             {
-                setMessagesList([...messages]);
+                setMessagesList(messages);
                 if(messagesCtrRef.current)
                 {
                       messagesCtrRef.current.scrollTop = messagesCtrRef.current?.scrollHeight;
@@ -49,10 +49,7 @@ function MessagesPart()
             }
     },[messages]);
 
-    useEffect(()=>{
-        console.log(messagesList);
-
-    },[messagesList]);
+ 
 
    
 
@@ -63,18 +60,21 @@ function MessagesPart()
 
         webSocketRef.current.onmessage = function(event)
         {
-            const newMessage:message = JSON.parse(event.data);
-
-            setMessagesList(prev=>[...prev,newMessage]);
-            
-            
+            const newMessage = JSON.parse(event.data);
+           
+            setMessagesList(prev=>[...prev,newMessage]);  
         }
 
        
     
     },[selectedConevrsationId]);
 
+     useEffect(()=>{
+        console.log(messagesList);
 
+    },[messagesList]); 
+
+   
 
     const handleSendMessage = ()=> {
         if (!inputMessage.trim() || !selectedConevrsationId) return;
@@ -84,17 +84,17 @@ function MessagesPart()
             messageContent: inputMessage,
             conversationId : selectedConevrsationId,
             senderId : Number(currentUser?.userId),
-            sentAt : new Date()
+            sentAt : new Date().toISOString()
 
         };
-
-        
+        //optimistic update
+       // setMessagesList(prev=>[...prev,newMessage]);
 
         if (webSocketRef.current?.readyState === WebSocket.OPEN) {
             webSocketRef.current.send(JSON.stringify(newMessage));
             setInputMessage('');
-
-             setTimeout(() => {
+                
+            setTimeout(() => {
                 navigate("/main-page/update")
             }, 10); 
             setTimeout(() => {
@@ -104,7 +104,16 @@ function MessagesPart()
         
         } 
        
-    
+       
+    function parsedMessageObject(m:string|message)
+    {
+        if(typeof(m)==='string')
+        {
+           return JSON.parse(m);
+        }
+      
+        return m;      
+    }
    
     useEffect(()=>{
         if(selectedConversation)
@@ -119,7 +128,7 @@ function MessagesPart()
 
     function messagesSkeletons()
     {
-        return  [1,2,3,4].map((m,i)=>i%2==0?<MessageSkeleton/>:<MessageSkeleton isSent/>)
+        return  [1,2,3,4].map((m,i)=>i%2==0?<MessageSkeleton key={i} />:<MessageSkeleton key={i} isSent/>)
     }
     return <div className="massages-part">
 

@@ -5,7 +5,7 @@ export interface message
 {
     messageId:number,
     messageContent:string|undefined;
-    sentAt:Date;
+    sentAt:string;
     conversationId:number|undefined,
     senderId:number
 }

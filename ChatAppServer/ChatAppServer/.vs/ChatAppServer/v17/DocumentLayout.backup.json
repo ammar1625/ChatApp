@@ -7,6 +7,13 @@
       "RelativeMoniker": "D:0:0:{C0BF59A5-A8B2-4BB8-8536-6DD70B2A6727}|ChatAppServer.csproj|solutionrelative:services\\websocketbehaviorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C0BF59A5-A8B2-4BB8-8536-6DD70B2A6727}|ChatAppServer.csproj|c:\\repos\\chatapp\\chatappserver\\chatappserver\\services\\websocketmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0BF59A5-A8B2-4BB8-8536-6DD70B2A6727}|ChatAppServer.csproj|solutionrelative:services\\websocketmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\dto\u0027s\\messagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C0BF59A5-A8B2-4BB8-8536-6DD70B2A6727}|ChatAppServer.csproj|c:\\repos\\chatapp\\chatappserver\\chatappserver\\services\\websocketserverbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0BF59A5-A8B2-4BB8-8536-6DD70B2A6727}|ChatAppServer.csproj|solutionrelative:services\\websocketserverbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -16,9 +23,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C0BF59A5-A8B2-4BB8-8536-6DD70B2A6727}|ChatAppServer.csproj|c:\\repos\\chatapp\\chatappserver\\chatappserver\\controllers\\messageapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0BF59A5-A8B2-4BB8-8536-6DD70B2A6727}|ChatAppServer.csproj|solutionrelative:controllers\\messageapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\dto\u0027s\\messagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D24601F8-5A41-4774-98C7-77E7A0861E62}|..\\ChatAppDataAccess\\ChatAppDataAccess.csproj|c:\\repos\\chatapp\\chatappserver\\chatappdataaccess\\messagedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -85,11 +89,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "WebSocketMessage.cs",
+              "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Services\\WebSocketMessage.cs",
+              "RelativeDocumentMoniker": "Services\\WebSocketMessage.cs",
+              "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Services\\WebSocketMessage.cs",
+              "RelativeToolTip": "Services\\WebSocketMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T14:47:55.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "WebSocketServerBackgroundService.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Services\\WebSocketServerBackgroundService.cs",
               "RelativeDocumentMoniker": "Services\\WebSocketServerBackgroundService.cs",
@@ -101,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "UserApi.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Controllers\\UserApi.cs",
               "RelativeDocumentMoniker": "Controllers\\UserApi.cs",
@@ -119,14 +135,14 @@
               "RelativeDocumentMoniker": "Services\\WebSocketBehaviorHandler.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Services\\WebSocketBehaviorHandler.cs",
               "RelativeToolTip": "Services\\WebSocketBehaviorHandler.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwB0AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA6wB0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-07T19:40:26.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "clsMessage.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppBusinessLayer\\clsMessage.cs",
               "RelativeDocumentMoniker": "..\\ChatAppBusinessLayer\\clsMessage.cs",
@@ -138,19 +154,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MessageDto.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\MessageDto.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\Dto\u0027s\\MessageDto.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\MessageDto.cs",
               "RelativeToolTip": "..\\ChatAppDataAccess\\Dto\u0027s\\MessageDto.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAUwBcAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T13:49:45.843Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MessageData.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\MessageData.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\MessageData.cs",
@@ -162,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MessageApi.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Controllers\\MessageApi.cs",
               "RelativeDocumentMoniker": "Controllers\\MessageApi.cs",
@@ -174,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "ConversationsApi.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Controllers\\ConversationsApi.cs",
               "RelativeDocumentMoniker": "Controllers\\ConversationsApi.cs",
@@ -186,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ConversationDto.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\Dto\u0027s\\ConversationDto.cs",
@@ -198,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\Dto\u0027s\\UserDto.cs",
@@ -210,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\data\\AppDbContext.cs",
@@ -222,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Utiles.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppBusinessLayer\\utiles\\Utiles.cs",
               "RelativeDocumentMoniker": "..\\ChatAppBusinessLayer\\utiles\\Utiles.cs",
@@ -234,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\models\\User.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\models\\User.cs",
@@ -246,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "clsUser.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppBusinessLayer\\clsUser.cs",
               "RelativeDocumentMoniker": "..\\ChatAppBusinessLayer\\clsUser.cs",
@@ -258,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UserData.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\UserData.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\UserData.cs",
@@ -270,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "ConversationData.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\ConversationData.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\ConversationData.cs",
@@ -282,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "clsConversation.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppBusinessLayer\\clsConversation.cs",
               "RelativeDocumentMoniker": "..\\ChatAppBusinessLayer\\clsConversation.cs",
@@ -294,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -306,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ChatAppBusinessLayer.csproj",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppBusinessLayer\\ChatAppBusinessLayer.csproj",
               "RelativeDocumentMoniker": "..\\ChatAppBusinessLayer\\ChatAppBusinessLayer.csproj",
@@ -318,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ConversationModel.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\Dto\u0027s\\ConversationModel.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\Dto\u0027s\\ConversationModel.cs",
@@ -330,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Conversation.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\models\\Conversation.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\models\\Conversation.cs",
@@ -342,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\models\\Message.cs",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\models\\Message.cs",
@@ -354,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "AppConfig.json",
               "DocumentMoniker": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppDataAccess\\AppConfig.json",
               "RelativeDocumentMoniker": "..\\ChatAppDataAccess\\AppConfig.json",
