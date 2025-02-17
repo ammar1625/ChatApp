@@ -7,8 +7,9 @@ import { base64ToBlob } from "../utiles/utiles";
 import male from "../images/user.jpg";
 import {  useEffect, useRef, useState } from "react";
 import useGetMessagesByConversation, { message } from "../hooks/useGetMessagesByConversation";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import MessageSkeleton from "./MessageSkeleton";
+
 
 
 
@@ -19,10 +20,9 @@ interface currentConversationInfos
 }
 function MessagesPart()
 {
-    const navigate =  useNavigate();
+  
 
-
-    //const messageFieldRef = useRef<HTMLInputElement>(null);
+    const messageFieldRef = useRef<HTMLInputElement>(null);
     const [messagesList , setMessagesList] = useState<message[]>([]);
     const webSocketRef = useRef<WebSocket | null>(null);
     const [inputMessage,setInputMessage] = useState("");
@@ -35,11 +35,11 @@ function MessagesPart()
     const {data:messages ,isLoading} = useGetMessagesByConversation(selectedConevrsationId);
     const {user} =useUserLogInInfos();
     const {data:currentUser} =useLogIn(user);
-
-    useEffect(()=>{
+  
+       useEffect(()=>{
         if(messages)
             {
-                setMessagesList(messages);
+                setMessagesList([...messages]);
                 if(messagesCtrRef.current)
                 {
                       messagesCtrRef.current.scrollTop = messagesCtrRef.current?.scrollHeight;
@@ -47,8 +47,9 @@ function MessagesPart()
                 }
                
             }
-    },[messages]);
+    },[messages]);   
 
+    
  
 
    
@@ -61,20 +62,25 @@ function MessagesPart()
         webSocketRef.current.onmessage = function(event)
         {
             const newMessage = JSON.parse(event.data);
-           
-            setMessagesList(prev=>[...prev,newMessage]);  
+            setMessagesList(prev=>[...prev,newMessage]);       
         }
 
-       
-    
+         // Clean up the WebSocket connection when the effect runs again or the component unmounts
+        return () => {
+        if (webSocketRef.current && webSocketRef.current.readyState === WebSocket.OPEN) {
+            webSocketRef.current.close();
+        }
+        webSocketRef.current = null;
+    };
     },[selectedConevrsationId]);
 
-     useEffect(()=>{
-        console.log(messagesList);
-
-    },[messagesList]); 
-
    
+    function clearFields()
+    {
+        if(messageFieldRef.current)
+        messageFieldRef.current.value ="";
+    }
+  
 
     const handleSendMessage = ()=> {
         if (!inputMessage.trim() || !selectedConevrsationId) return;
@@ -87,33 +93,18 @@ function MessagesPart()
             sentAt : new Date().toISOString()
 
         };
-        //optimistic update
-       // setMessagesList(prev=>[...prev,newMessage]);
-
-        if (webSocketRef.current?.readyState === WebSocket.OPEN) {
+      
+    
+         if (webSocketRef.current?.readyState === WebSocket.OPEN) {
             webSocketRef.current.send(JSON.stringify(newMessage));
-            setInputMessage('');
-                
-            setTimeout(() => {
-                navigate("/main-page/update")
-            }, 10); 
-            setTimeout(() => {
-                navigate("/main-page");
-            }, 15); 
+            setInputMessage(''); 
+            clearFields();
         } 
         
         } 
        
        
-    function parsedMessageObject(m:string|message)
-    {
-        if(typeof(m)==='string')
-        {
-           return JSON.parse(m);
-        }
-      
-        return m;      
-    }
+        
    
     useEffect(()=>{
         if(selectedConversation)
@@ -130,6 +121,8 @@ function MessagesPart()
     {
         return  [1,2,3,4].map((m,i)=>i%2==0?<MessageSkeleton key={i} />:<MessageSkeleton key={i} isSent/>)
     }
+
+
     return <div className="massages-part">
 
            <div className="conversation current-convesation">
@@ -140,16 +133,16 @@ function MessagesPart()
             <div ref = {messagesCtrRef} className="messages-ctr">
 
 
-                {isLoading? messagesSkeletons(): messagesList?.map(m=> <div key={Number(m.messageId)} className={m.senderId===Number(currentUser?.userId)?"message-ctr":"message-ctr incoming-msg-ctr"}>
+                  { isLoading? messagesSkeletons():  messagesList?.map(m=> <div key={Number(m.messageId)} className={m.senderId===Number(currentUser?.userId)?"message-ctr":"message-ctr incoming-msg-ctr"}>
                     <p  className={m.senderId===Number(currentUser?.userId)?"message":"message incoming-message"}>{m.messageContent}</p>
-                </div>)}
-             
+                </div>)}  
+               
             </div>
 
           
 
             <div className="message-field-ctr">
-                <input  className="message-field" type="text" onChange={(e)=>{
+                <input ref={messageFieldRef}  className="message-field" type="text" onChange={(e)=>{
                     setInputMessage(e.target.value);
                    
                 }}/>

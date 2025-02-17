@@ -99,9 +99,10 @@
               "RelativeDocumentMoniker": "Services\\WebSocketMessage.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Services\\WebSocketMessage.cs",
               "RelativeToolTip": "Services\\WebSocketMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:47:55.89Z"
+              "WhenOpened": "2025-02-16T14:47:55.89Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -135,7 +136,7 @@
               "RelativeDocumentMoniker": "Services\\WebSocketBehaviorHandler.cs",
               "ToolTip": "C:\\repos\\ChatApp\\ChatAppServer\\ChatAppServer\\Services\\WebSocketBehaviorHandler.cs",
               "RelativeToolTip": "Services\\WebSocketBehaviorHandler.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAACEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-07T19:40:26.79Z",
               "EditorCaption": ""
