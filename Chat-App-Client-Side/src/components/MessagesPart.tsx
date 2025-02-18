@@ -9,7 +9,7 @@ import {  useEffect, useRef, useState } from "react";
 import useGetMessagesByConversation, { message } from "../hooks/useGetMessagesByConversation";
 //import { useNavigate } from "react-router-dom";
 import MessageSkeleton from "./MessageSkeleton";
-
+import audio from "../sounds/notification.mp3";
 
 
 
@@ -20,8 +20,9 @@ interface currentConversationInfos
 }
 function MessagesPart()
 {
-  
-
+     
+    const notification = new Audio(audio);
+    
     const messageFieldRef = useRef<HTMLInputElement>(null);
     const [messagesList , setMessagesList] = useState<message[]>([]);
     const webSocketRef = useRef<WebSocket | null>(null);
@@ -52,7 +53,12 @@ function MessagesPart()
     
  
 
-   
+   function handleNotification()
+   {
+     notification.pause();
+     notification.currentTime = 0;
+     notification.play();
+   }
 
     useEffect(()=>{
         if (!selectedConevrsationId) return;
@@ -61,12 +67,19 @@ function MessagesPart()
 
         webSocketRef.current.onmessage = function(event)
         {
-            const newMessage = JSON.parse(event.data);
+            const newMessage:message = JSON.parse(event.data);
             setMessagesList(prev=>[...prev,newMessage]); 
             setTimeout(()=>{
                 if(messagesCtrRef.current)
                     {
-                          messagesCtrRef.current.scrollTop = messagesCtrRef.current?.scrollHeight;
+                        //scroll to see the new message
+                          messagesCtrRef.current.scrollTop = messagesCtrRef.current?.scrollHeight; 
+
+                          //if the new message is not sent bu the current user then trigger the notification
+                          if(newMessage.senderId !== Number(currentUser?.userId))
+                          {
+                             handleNotification();
+                          }
                          
                     }
             },500)      

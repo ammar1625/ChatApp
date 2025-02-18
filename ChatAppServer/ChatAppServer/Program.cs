@@ -10,6 +10,9 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
+
+
+
 // Add services to the container.
 builder.Services.AddHostedService<WebSocketServerBackgroundService>();
 builder.Services.AddControllers();
