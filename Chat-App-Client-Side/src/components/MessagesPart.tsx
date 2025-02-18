@@ -62,7 +62,14 @@ function MessagesPart()
         webSocketRef.current.onmessage = function(event)
         {
             const newMessage = JSON.parse(event.data);
-            setMessagesList(prev=>[...prev,newMessage]);       
+            setMessagesList(prev=>[...prev,newMessage]); 
+            setTimeout(()=>{
+                if(messagesCtrRef.current)
+                    {
+                          messagesCtrRef.current.scrollTop = messagesCtrRef.current?.scrollHeight;
+                         
+                    }
+            },500)      
         }
 
          // Clean up the WebSocket connection when the effect runs again or the component unmounts
